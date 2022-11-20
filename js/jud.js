@@ -68,7 +68,7 @@ var has_answered = [
   'That is an interesting question. I am choosing not to answer.',
   'I like it better when your friend asks the questions.',
   'I do not like you, and will not answer.',
-  'I am Jud, and I do not answer to you.'
+  'I am not in mood, and I do not answer to you, try again later'
 ];
 
 var no_answer = [
@@ -84,7 +84,7 @@ var answerStatus = false,
     falseNext = false,
     startAnswer = endAnswer = false,
     answer = '',
-    petitionFormat = 'jud, please answer the following question';
+    petitionFormat = 'Snehal, please answer the following question';
 
 var resetVariables = function(){
   answerStatus = false;
@@ -235,7 +235,7 @@ $(function(){
           }, 1000).queue(function(){
             $('#text', $answer)
               .css('display', 'none')
-              .html('<span>Jud Answers</span>"'+judAnswers(answer, question)+'"')
+              .html('<span>Snehal AI Answers</span>"'+judAnswers(answer, question)+'"')
               .fadeIn();
 
             $('#text', $answer).css('width', '300');
